@@ -11,5 +11,5 @@ type person struct {
 func main() {
 	var alex person
 	fmt.Println(alex)
-
+	fmt.Printf("%+v", alex)
 }
