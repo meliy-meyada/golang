@@ -10,6 +10,11 @@ type person struct {
 
 func main() {
 	var alex person
+
+	alex.firstName = "Alex"
+	alex.lastName = "Anderson"
+	
 	fmt.Println(alex)
 	fmt.Printf("%+v", alex)
 }
+
