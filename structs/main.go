@@ -22,7 +22,13 @@ func main() {
 			zipCode: 94000,
 		},
 	}
+	meya.print()
 
-	fmt.Printf("%+v", meya)
+
+}
+
+func (p person) print() {
+
+	fmt.Printf("%+v", p)
 
 }
