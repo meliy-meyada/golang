@@ -22,8 +22,8 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	meyaPointer := &meya
-	meyaPointer.updateName("mayrisa")
+
+	meya.updateName("mayrisa")
 	meya.print()
 
 
@@ -34,6 +34,7 @@ func (pointerToPerson *person) updateName(newFirstName string) {
 }
  
 func (p person) print() {
+
 
 	fmt.Printf("%+v", p)
 
