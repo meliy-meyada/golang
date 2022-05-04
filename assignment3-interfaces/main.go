@@ -2,17 +2,26 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"os"
 )
 
+
 func main() {
-	f, err := os.Open(os.Args[1])
-	if err != nil{
-		fmt.Println("Error:" , err)
-		os.Exit(1)
+	f, err := os.Create("myfile.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
-	io.Copy(os.Stdout, f)
-
-
+	w, err := f.WriteString("Hey this is Myfile!!!")
+	if err != nil {
+		fmt.Println(err)
+		f.Close()
+		return
+	}
+	fmt.Println(w, "bytes written successfully")
+	err = f.Close()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 }
